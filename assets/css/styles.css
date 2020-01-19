@@ -1,0 +1,62 @@
+:root {
+  --primary-color: hsl(30, 100%, 50%);
+  --font: 'Roboto', sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #F0F0F0;
+  font-family: var(--font);
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.mar-center {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container {
+  text-align: center;
+  max-width: 720px;
+}
+
+.img-container {
+  width: 50%;
+}
+
+.button {
+  padding: .75rem;
+  background-color: var(--primary-color);
+  color: #FFF;
+  font-size: 1.5em;
+  /* border-color: #000 */
+  margin-top: .5rem;
+  margin-right: .5rem;
+}
+
+.button:hover {
+  background-color: #FFF;
+  color: var(--primary-color);
+  cursor: pointer;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <title>Document</title>
+</head>
+<body>
+  <main id="app">
+    <div class="container mar-center" >
+      <div class="img-container mar-center">
+        <img :src="'./assets/img/' + tries +'.png'" alt="Imagen del ahorcado">
+        <h3>Intentos: <small> {{ tries }} / 9</small></h3>
+      </div>
+      <h1>{{ hiddenWord }}</h1>
+      <div v-if="win">
+        <p><strong>Muchas felicidades</strong>, has descifrado la palabra oculta</p>
+      </div>
+      <div v-if="lose">
+        <p>Lo siento has perdido, la palabra era: <strong> {{word}} </strong></p>
+      </div>
+      <div v-if="showLetters" class="letters-container">
+        <button class="button" @click="checkLetter(letter)" v-for="letter in lettersArray">{{ letter }}</button>
+      </div>
+      <button class="button" @click="refresh()">Reiniciar Juego</button>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="./assets/js/vue.js"></script>
+</body>
+</html>
